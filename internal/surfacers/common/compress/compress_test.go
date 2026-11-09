@@ -39,6 +39,7 @@ func TestCompressBytes(t *testing.T) {
 	// in="H4sIAAAAAAAA/youKcrMS1coyUgsUcgsVkhMyi8tUSjJV0hKVUjOzy0oSi0uTk0BBAAA//+2oNy3JQAAAA=="
 	// echo -n $in | base64 -d | gunzip -c
 	expectedCompressed := "H4sIAAAAAAAA/youKcrMS1coyUgsUcgsVkhMyi8tUSjJV0hKVUjOzy0oSi0uTk0BBAAA//+2oNy3JQAAAA=="
+	t.Log(string(compressed))
 	if string(compressed) != expectedCompressed {
 		t.Errorf("compressBytes(), got=%s, expected=%s", string(compressed), expectedCompressed)
 	}
